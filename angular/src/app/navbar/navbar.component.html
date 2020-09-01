@@ -1,0 +1,61 @@
+<!--Navbar-->
+<mdb-navbar SideClass="info-color navbar navbar-expand-lg navbar-dark " [containerInside]="false">
+
+    <!-- Navbar brand -->
+    <mdb-navbar-brand><a class="navbar-brand" href="#">E-Reputation</a></mdb-navbar-brand>
+
+    <!-- Collapsible content -->
+    <links>
+
+      <!-- Links -->
+      <ul class="navbar-nav mr-auto">
+
+
+        <!-- Dropdown -->
+        <li class="nav-item dropdown" dropdown>
+          <a dropdownToggle mdbWavesEffect type="button" class="nav-link dropdown-toggle waves-light" mdbWavesEffect>
+            <mdb-icon fas icon="bars"></mdb-icon><span class="caret"></span></a>
+          <div *dropdownMenu class="dropdown-menu dropdown dropdown-primary" role="menu">
+            <a class="dropdown-item waves-light" mdbWavesEffect routerLink="/allRequest">My Projects</a>
+            <a class="dropdown-item waves-light" mdbWavesEffect href="/translate">Translation</a>
+            <a class="dropdown-item waves-light" mdbWavesEffect href="/analyse">Sentiment analyses</a>
+            <div class="divider dropdown-divider"></div>
+            <a class="dropdown-item waves-light" mdbWavesEffect href="#">Grafana</a>
+          </div>
+        </li>
+
+      </ul>
+      <!-- Links -->
+
+      <ul class="navbar-nav ml-auto nav-flex-icons">
+        <li class="nav-item">
+          <a class="nav-link">
+            <mdb-icon fab icon="twitter"></mdb-icon>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link">
+            <mdb-icon fab icon="facebook"></mdb-icon>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link">
+            <div class="btn-group" mdbDropdown>
+              <mdb-icon fas icon="user" mdbDropdownToggle></mdb-icon>
+              <div class="dropdown-menu dropdown-menu-right dropdown-primary">
+                <a class="dropdown-item" routerLink="/account">my account</a>
+                <a class="dropdown-item" routerLink="/setting">Settings</a>
+                <a class="dropdown-item" routerLink="/login">Switch account</a>
+                <a class="dropdown-item" (click)="onlogout()">Sign out</a>
+                <div class="divider dropdown-divider"></div>
+                <a class="dropdown-item" routerLink="/contact">Contact</a>
+              </div>
+            </div>
+          </a>
+        </li>
+      </ul>
+    </links>
+    <!-- Collapsible content -->
+
+  </mdb-navbar>
+  <!--/.Navbar-->

@@ -1,0 +1,99 @@
+<div class=container4>
+  <!-- Material form register -->
+<mdb-card>
+
+  <mdb-card-header class=" black-text text-center py-4 ">
+    <h2>
+      <strong>Sign up</strong>
+    </h2>
+  </mdb-card-header>
+
+  <!--Card content-->
+  <mdb-card-body class="px-lg-5 pt-0">
+
+    <!-- Form -->
+    <form class="text-center" style="color: #757575;">
+
+      <div class="form-row">
+        <div class="col">
+          <!-- Username -->
+          <div class="md-form">
+            <input type="text" id="materialRegisterFormUsername" class="form-control" mdbInput name="username" [(ngModel)]="user.username">
+            <label for="materialRegisterFormUsername">Username</label>
+          </div>
+        </div>
+        <div class="col">
+          <!-- Last name -->
+          <div class="md-form">
+            <input type="email" id="materialRegisterFormFullName" class="form-control" mdbInput name="name" [(ngModel)]="user.name">
+            <label for="materialRegisterFormFullName">Full name</label>
+          </div>
+        </div>
+      </div>
+
+      <!-- E-mail -->
+      <div class="md-form mt-0">
+        <input type="email" id="materialRegisterFormEmail" class="form-control" mdbInput name="email" [(ngModel)]="user.email">
+        <label for="materialRegisterFormEmail">E-mail</label>
+      </div>
+      <!-- E-mail -->
+      <div class="md-form mt-0">
+        <input type="date" id="materialRegisterBirthDate" class="form-control" mdbInput name="date" [(ngModel)]="user.date">
+        <label for="materialRegisterBirthDate">Birth date</label>
+      </div>
+
+      <!-- Password -->
+      <div class="md-form">
+        <input type="password" id="materialRegisterFormPassword" class="form-control" aria-describedby="materialRegisterFormPasswordHelpBlock"
+          mdbInput name="password" [(ngModel)]="user.password">
+        <label for="materialRegisterFormPassword">Password</label>
+        <small id="materialRegisterFormPasswordHelpBlock" class="form-text text-muted mb-4">
+          At least 8 characters and 1 digit
+        </small>
+      </div>
+
+      <!--Confirm Password -->
+      <div class="md-form">
+        <input type="password" id="materialRegisterFormConfirmPassword" class="form-control" aria-describedby="materialRegisterFormConfirmPasswordHelpBlock"
+               mdbInput name="password2" [(ngModel)]="password2">
+        <label for="materialRegisterFormConfirmPassword">Confirm password</label>
+      </div>
+
+      <!-- Newsletter -->
+      <mdb-checkbox>Subscribe to our newsletter</mdb-checkbox>
+
+      <!-- Sign up button -->
+      <button mdbBtn color="info" outline="true" rounded="true" block="true" class="my-4 waves-effect z-depth-0" mdbWavesEffect
+        type="submit" (click)="onRegister()">Sign Up</button>
+
+      <!-- Social register -->
+      <p>or sign up with:</p>
+
+      <a type="button" class="light-blue-text mx-2">
+        <mdb-icon fab icon="facebook"></mdb-icon>
+      </a>
+      <a type="button" class="light-blue-text mx-2">
+        <mdb-icon fab icon="twitter"></mdb-icon>
+      </a>
+      <a type="button" class="light-blue-text mx-2">
+        <mdb-icon fab icon="linkedin"></mdb-icon>
+      </a>
+      <a type="button" class="light-blue-text mx-2">
+        <mdb-icon fab icon="heart"></mdb-icon>
+      </a>
+
+      <hr>
+
+      <!-- Terms of service -->
+      <p>By clicking
+        <em>Sign up</em> you agree to our
+        <a href="" target="_blank">terms of service</a>. </p>
+
+    </form>
+    <!-- Form -->
+
+  </mdb-card-body>
+
+</mdb-card>
+<!-- Material form register -->
+</div>

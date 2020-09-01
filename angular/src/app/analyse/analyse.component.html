@@ -1,0 +1,50 @@
+<div class="container my-5 py-5 z-depth-1">
+
+    <!--Section: Content-->
+    <section class="px-md-5 mx-md-5 text-center text-lg-left dark-grey-text">
+  
+  
+      <!--Grid row-->
+      <div class="row d-flex justify-content-center">
+  
+        <!--Grid column-->
+        <div class="col-md-9">
+  
+          <!-- Default form contact -->
+          <form class="text-center" action="#!">
+            <h3 class="font-weight-bold mb-4">Translate sevice</h3>
+
+         <!-- Message -->
+            <div class="form-group">
+                 <textarea class="form-control rounded-0" id="exampleFormControlTextarea2" rows="4"
+                     placeholder="Message" [(ngModel)]="text" name="text"></textarea>
+                </div>
+
+  
+             <!-- Message -->
+             <div class="form-group">
+                    {{this.response}}
+                  <div>
+                    <div *ngIf="response>0">
+                      <i class='far fa-grin-alt' style='font-size:48px;color:green'></i>
+                    </div>
+                    <div *ngIf="response<0">
+                      <i class='far fa-frown-open' style='font-size:48px;color:red'></i>                    </div>
+                    
+                  </div>  
+               </div>
+  
+            <!-- Send button -->
+            <button class="btn btn-info btn-block" type="submit" (click)="onAnalyse()">Send</button>
+  
+          </form>
+
+  
+        </div>
+
+  
+      </div>
+
+    </section>
+
+  </div>

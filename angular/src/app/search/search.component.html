@@ -1,0 +1,31 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-12 mx-auto">
+      <div class="md-form">
+        <input type="text" id="search" class="search-query form-control" mdbInput  name="name" [(ngModel)]="name"/>
+        <button mdbBtn size="sm"  rounded="true" class="my-0 waves-light" mdbWavesEffect type="submit" (click)="getRequestByName()">Search</button>
+        <button mdbBtn size="sm" color="info"  rounded="true" class="my-0 waves-light" mdbWavesEffect type="submit"(click)="allRequests()">All project</button><label for="search">Search With Request Name</label>
+        <button mdbBtn size="sm"  rounded="true" class="my-0 waves-light" mdbWavesEffect type="submit"routerLink="/newProject">New project</button>
+
+      </div>
+    </div>
+  </div>
+  <table mdbTable class="z-depth-1">
+    <thead>
+    <tr>
+      <th>Id</th>
+      <th>Name</th>
+      <th>date</th>
+      <th>Action</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let requet of requets">
+      <td>{{requet.id}}</td>
+      <td><a href="project/{{requet.id}}">{{requet.username}}</a></td>
+      <td>{{requet.date}}</td>
+      <td></td>
+    </tr>
+    </tbody>
+  </table>
+</div>

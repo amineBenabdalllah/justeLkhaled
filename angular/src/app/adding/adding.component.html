@@ -1,0 +1,64 @@
+<div class=container4>
+  <mdb-card>
+    <!-- Material form contact -->
+    <div class="card">
+
+      <h5 class="card-header  black-text text-center py-4">
+        <strong>New project</strong>
+      </h5>
+
+      <!--Card content-->
+      <div class="container my-5 py-5 z-depth-2">
+        <!-- Form -->
+        <form class="text-center" style="color: #757575;" action="#!">
+          <strong>Tweeter request</strong>
+
+
+      
+
+          <!-- Key words -->
+          <div class="md-form">
+            <input type="text" id="materialLoginFormDate"  class="form-control" mdbInput [(ngModel)]="twitterKey" name="motCle" required="required">
+            <label for="materialLoginFormDate">Key words</label>
+          </div>
+          <!-- Language -->
+          <div class="md-form">
+            <input type="text" id="materialLoginFormLanguage"  class="form-control" mdbInput [(ngModel)]="twitterLanguage" name="Language" required="required">
+            <label for="materialLoginFormLanguage">Language</label>
+          </div>
+
+          <!-- Reddddddiiiiiiitttttt-->
+          <strong>Reddit request</strong>
+                <!-- Name -->
+
+              <!-- Key words -->
+          <div class="md-form">
+          <input type="text" id="materialLoginFormDate"  class="form-control" mdbInput [(ngModel)]="redditKey" name="motCle" required="required">
+        <label for="materialLoginFormDate">Key words</label>
+        </div>
+          <!-- Language -->
+          <div class="md-form">
+          <input type="text" id="materialLoginFormLanguage"  class="form-control" mdbInput [(ngModel)]="redditLanguage" name="Language" required="required">
+          <label for="materialLoginFormLanguage">Language</label>
+          </div>
+          <div class="md-form">
+            <input type="number" id="materialLoginFormLanguage"  class="form-control" mdbInput [(ngModel)]="redditCount" name="Language" required="required">
+            <label for="materialLoginFormLanguage">Number to texts to analyse</label>
+            </div>
+
+
+          <!-- Send button -->
+          <button class="btn btn-outline-info btn-rounded btn-block z-depth-0 my-4 waves-effect" type="submit" (click)="addNow()">Save</button>
+
+        </form>
+        <!-- Form -->
+
+      </div>
+
+    </div>
+    <!-- Material form contact -->
+  </mdb-card>
+</div>
+<div class="alert alert-primary" role="alert"*ngIf="message">
+  {{message}}
+</div>

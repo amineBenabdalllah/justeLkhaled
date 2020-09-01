@@ -1,0 +1,99 @@
+<div class=container4>
+  <mdb-card>
+  <!-- Material form contact -->
+  <div class="card">
+
+    <h5 class="card-header  black-text text-center py-4">
+      <strong>Public info</strong>
+    </h5>
+
+    <!--Card content-->
+    <div class="card-body px-lg-5 pt-0">
+
+      <!-- Form -->
+      <form class="text-center" style="color: #757575;" action="#!">
+
+        <!-- Name -->
+        <div class="md-form">
+          <input type="text" id="materialLoginFormName"  class="form-control" mdbInput [(ngModel)]="user.name" name="name" value="{{user.name}}">
+          <label for="materialLoginFormName">Name</label>
+        </div>
+
+        <!-- Email -->
+        <div class="md-form">
+          <input type="email" id="materialLoginFormEmail"  class="form-control" mdbInput [(ngModel)]="user.email" name="email" value="{{user.email}}">
+          <label for="materialLoginFormEmail">E-mail</label>
+        </div>
+
+        <!-- Date -->
+        <div class="md-form">
+          <input type="date" id="materialLoginFormDate"  class="form-control" mdbInput [(ngModel)]="user.date" name="date" value="{{user.date}}">
+          <label for="materialLoginFormDate">Date birth</label>
+        </div>
+
+
+
+
+
+        <!-- Send button -->
+        <button class="btn btn-outline-info btn-rounded btn-block z-depth-0 my-4 waves-effect" type="submit" (click)="updateNow()">Save</button>
+
+      </form>
+      <!-- Form -->
+
+    </div>
+
+  </div>
+  <!-- Material form contact -->
+  </mdb-card>
+</div>
+<br>
+<div class=container4>
+  <mdb-card>
+<!-- Material form contact -->
+<div class="card">
+
+  <h5 class="card-header  black-text text-center py-4">
+    <strong>Password change</strong>
+  </h5>
+
+  <!--Card content-->
+  <div class="card-body px-lg-5 pt-0">
+
+    <!-- Form -->
+    <form class="text-center" style="color: #757575;" #f="ngForm" (ngSubmit)="changepassword(f.value)" >
+
+      <!-- Current password -->
+      <div class="md-form mt-3">
+        <input type="password"  class="form-control" placeholder="Current password" ngModel name="password">
+
+      </div>
+
+      <!-- New password -->
+      <div class="md-form">
+        <input type="password"  class="form-control" placeholder="New password" ngModel name="newpassword">
+
+      </div>
+
+      <!--Confirm new password -->
+      <div class="md-form">
+        <input type="password"  class="form-control" placeholder="Confirm new password" ngModel name="confirmnewpassword">
+
+      </div>
+
+
+
+
+
+      <!-- Send button -->
+      <button class="btn btn-outline-info btn-rounded btn-block z-depth-0 my-4 waves-effect" type="submit">Save</button>
+
+    </form>
+    <!-- Form -->
+
+  </div>
+
+</div>
+<!-- Material form contact -->
+  </mdb-card>
+</div>

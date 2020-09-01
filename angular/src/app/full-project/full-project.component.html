@@ -1,0 +1,71 @@
+<br>
+<br>
+<div class="container3">
+  <h1>Scraping</h1>
+<table mdbTable class="z-depth-1">
+  <thead>
+  <tr>
+    <th>Name</th>
+    <th>type</th>
+    <th>mot</th>
+    <th>date</th>
+    <th>Language</th>
+    <th>Action</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr>
+    <td>{{scraper.name}}</td>
+    <td>Web scraping</td>
+    <td>{{scraper.date}}</td>
+    <td>{{scraper.motCle}}</td>
+    <td>{{scraper.language}}</td>
+    <td *ngIf="state;else esleBlock">Activated</td>
+    <td><ng-template #esleBlock>Stopped</ng-template></td>
+    <td class="text-center"><button class="btn btn-danger btn-xs" (click)="lancer()"><span class="glyphicon glyphicon-remove"></span> Launch</button></td>
+    <td class="text-center"><button class="btn btn-danger btn-xs" (click)="afficheur()"><span class="glyphicon glyphicon-remove"></span> stop</button></td>
+  </tr>
+  </tbody>
+</table>
+</div>
+
+
+<div class="container3">
+  <h1>Twitter</h1>
+<table mdbTable class="z-depth-1">
+  <thead>
+  <tr>
+    <th>Name</th>
+    <th>type</th>
+    <th>mot</th>
+    <th>date</th>
+    <th>Language</th>
+    <th>Action</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr>
+    <td>{{twitter.name}}</td>
+    <td>Twitter</td>
+    <td>{{twitter.date}}</td>
+    <td>{{twitter.motCle}}</td>
+    <td>{{twitter.language}}</td>
+    <td *ngIf="state;else esleBlock">Activated</td>
+    <td><ng-template #esleBlock>Stopped</ng-template></td>
+    <td class="text-center"><button class="btn btn-danger btn-xs" (click)="lancer()"><span class="glyphicon glyphicon-remove"></span> Launch</button></td>
+    <td class="text-center"><button class="btn btn-danger btn-xs" (click)="afficheur()"><span class="glyphicon glyphicon-remove"></span> stop</button></td>
+  </tr>
+  </tbody>
+</table>
+</div>
+<div class="container">
+  <mdb-card>
+    <!-- Material form contact -->
+    <div class="card">
+
+      <h2 class="font-weight-bold">Token <i class="fa fa-key" style="font-size: 25px;" aria-hidden="true"></i>:<p class="text-muted" style="font-size: 15px;"> {{key}} </p></h2>
+
+    </div>
+    <!-- Material form contact -->
+  </mdb-card>
+</div>

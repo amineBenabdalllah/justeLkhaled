@@ -1,0 +1,35 @@
+<div class=container4>
+    <mdb-card>
+      <!-- Material form contact -->
+      <div class="card">
+  
+        <h5 class="card-header  black-text text-center py-4">
+          <strong>New request</strong>
+        </h5>
+  
+        <!--Card content-->
+        <div class="container my-5 py-5 z-depth-2">
+          <!-- Form -->
+          <form class="text-center" style="color: #757575;" action="#!">
+  
+            <!-- Name -->
+            <div class="md-form">
+              <input type="text" id="materialLoginFormName"  class="form-control" mdbInput [(ngModel)]="title" name="name"required="required">
+              <label for="materialLoginFormName">Name</label>
+            </div>  
+            <!-- Send button -->
+            <button class="btn btn-outline-info btn-rounded btn-block z-depth-0 my-4 waves-effect" type="submit" (click)="addHybrid()">Save</button>
+  
+          </form>
+          <!-- Form -->
+  
+        </div>
+  
+      </div>
+      <!-- Material form contact -->
+    </mdb-card>
+  </div>
+  <div class="alert alert-primary" role="alert"*ngIf="message">
+    {{message}}
+  </div>
+  

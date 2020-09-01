@@ -1,0 +1,43 @@
+<br>
+<br>
+<div class="container3">
+<table mdbTable class="z-depth-1">
+  <thead>
+  <tr>
+    <th>Id</th>
+    <th>Name</th>
+    <th>type</th>
+    <th>mot</th>
+    <th>date</th>
+    <th>Language</th>
+    <th>Action</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr>
+    <td>{{id}}</td>
+    <td>{{requet.name}}</td>
+    <td>{{requet.type}}</td>
+    <td>{{requet.motCle}}</td>
+    <td>{{requet.date}}</td>
+    <td>{{requet.language}}</td>
+    <td *ngIf="state;else esleBlock">Activated</td>
+    <td><ng-template #esleBlock>Stopped</ng-template></td>
+    <td class="text-center"><button class="btn btn-danger btn-xs" (click)="launchRequet(requet.id, requet.name, requet.motCle)"><span class="glyphicon glyphicon-remove"></span> Launch</button></td>
+    <td class="text-center"><button class="btn btn-danger btn-xs" (click)="stopRequet(requet.id)"><span class="glyphicon glyphicon-remove"></span> stop</button></td>
+  </tr>
+  </tbody>
+</table>
+</div>
+
+<div class="container">
+  <mdb-card>
+    <!-- Material form contact -->
+    <div class="card">
+
+      <h2 class="font-weight-bold">Token <i class="fa fa-key" style="font-size: 25px;" aria-hidden="true"></i>:<p class="text-muted" style="font-size: 15px;"> {{key}} </p></h2>
+
+    </div>
+    <!-- Material form contact -->
+  </mdb-card>
+</div>

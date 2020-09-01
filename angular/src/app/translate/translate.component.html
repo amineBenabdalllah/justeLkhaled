@@ -1,0 +1,62 @@
+<div class="container my-5 py-5 z-depth-1">
+
+    <!--Section: Content-->
+    <section class="px-md-5 mx-md-5 text-center text-lg-left dark-grey-text">
+  
+  
+      <!--Grid row-->
+      <div class="row d-flex justify-content-center">
+  
+        <!--Grid column-->
+        <div class="col-md-9">
+  
+          <!-- Default form contact -->
+          <form class="text-center" action="#!">
+            <h3 class="font-weight-bold mb-4">Translate sevice</h3>
+            <label>Translate From</label>
+            <select class="browser-default custom-select mb-4">
+              <option value="" disabled>Choose Language</option>
+              <option value="1" selected>French</option>
+              <option value="2">Report a bug</option>
+              <option value="3">Feature request</option>
+              <option value="4">Feature request</option>
+            </select>
+
+         <!-- Message -->
+            <div class="form-group">
+                 <textarea class="form-control rounded-0" id="exampleFormControlTextarea2" rows="4"
+                     placeholder="Message" [(ngModel)]="text" name="text"></textarea>
+                </div>
+            <!-- Subject -->
+            <label>To</label>
+            <select class="browser-default custom-select mb-4">
+              <option value="" disabled>Choose Language</option>
+              <option value="1" selected>English</option>
+              <option value="2">Report a bug</option>
+              <option value="3">Feature request</option>
+              <option value="4">Feature request</option>
+            </select>
+            <div class="form-group">
+              <textarea class="form-control rounded-0" id="exampleFormControlTextarea2" rows="4"
+                  placeholder= {{this.response}} [(ngModel)]="text" name="text"></textarea>
+             </div>
+  
+             <!-- Message -->
+             <div class="form-group">
+                    {{this.response}}
+               </div>
+  
+            <!-- Send button -->
+            <button class="btn btn-info btn-block" type="submit" (click)="onTranslate()">Translate</button>
+  
+          </form>
+
+  
+        </div>
+
+  
+      </div>
+
+    </section>
+
+  </div>
